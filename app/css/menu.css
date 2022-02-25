@@ -1,0 +1,38 @@
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+
+  margin-top: 2vh;
+}
+
+.tab {
+  background: linear-gradient(#575757, #2c2c2c);
+
+  color: rgb(255, 255, 255);
+
+  font-weight: bold;
+
+  height: 6vh;
+  width: 10vw;
+  font-size: 14;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* align-items: center; */
+  /* text-align: center; */
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  cursor: pointer;
+}
+
+.tab-cordinadores {
+  margin-left: 10px;
+}
+
+.tab-nominas {
+  margin-left: auto;
+  margin-right: 10px;
+}

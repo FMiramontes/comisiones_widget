@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/menu.css" />
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body>
+    <h1>Comisiones</h1>
+    <div class="menu">
+      <div class="tab tab-cordinadores"><p>Cordinadores</p></div>
+      <div class="tab tab-vendedores"><p>Vendedores</p></div>
+      <div class="tab tab-call-center"><p>Call Center</p></div>
+      <!--  -->
+      <div class="tab tab-nominas"><p>Nominas</p></div>
+    </div>
+    <div class="wrapper">
+      <table id="table-data" class="table-data">
+        <thead>
+          <th>Fecha de Cierre</th>
+          <th>Vendedor</th>
+          <th>Coordinador</th>
+          <th>Cliente</th>
+          <th>Lote</th>
+          <th>Tipo de Politica</th>
+          <th>Forma de Pago</th>
+          <th>Apartado</th>
+          <th>Valor Colocado</th>
+          <th>Comision (%)</th>
+          <th>A pagar</th>
+          <th>Saldo adeudado</th>
+          <th>Remanente 1</th>
+          <th>Remanente 2</th>
+          <th>Remanente 3</th>
+          <th>Remanente 4</th>
+          <th>Comision Pagada</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2022/01/05</td>
+            <td>Vendedor Prueba</td>
+            <td>Coordinador Prueba</td>
+            <td>Prueba prueba prueba</td>
+            <td>VILLA PRUEBA M2-L2</td>
+            <td>Enganche</td>
+            <td>Credito</td>
+            <td>$0</td>
+            <td>$159,000</td>
+            <td>
+              <input type="text" class="form-field porcent" placeholder="%" />
+            </td>
+            <td>$0</td>
+            <td>$220</td>
+            <td><input type="text" class="form-field" /></td>
+            <td><input type="text" class="form-field" /></td>
+            <td><input type="text" class="form-field" /></td>
+            <td><input type="text" class="form-field" /></td>
+            <td>
+              <input
+                type="checkbox"
+                name="comision-pagada"
+                id="comision-pagada"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
