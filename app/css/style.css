@@ -1,13 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,400&display=swap");
 
-*,
-*::before,
-*::after {
+html{
   box-sizing: border-box;
+  background-color: #e5e5e5;
 }
 
 body {
-  padding: 0;
+  padding: 10px;
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
@@ -16,6 +15,20 @@ body {
   width: 100%;
   overflow-x: auto;
 }
+.title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.linea{
+  width:20%;
+  height:5px;
+  background-color: #de9f27;
+}
+h1{
+  margin: 5px;
+}
 
 /* Table */
 .table-data {
@@ -23,24 +36,34 @@ body {
   border-collapse: collapse;
   border-radius: 15px;
   width: 120vw;
+  table-layout: fixed;
 }
 
 .table-data th,
 .table-data td {
-  padding: 10px 0;
+  padding: 10px 5px;
 }
 
 .table-data th {
-  background-color: #2c2c2c;
+  background-color: #342F2F;
   color: white;
+}
+.table-data th:first-child{
+  border-radius: 10px 0 0 0;
+}
+.table-data th:last-child{
+  border-radius: 0 10px 0 0;
 }
 
 .table-data tr:nth-child(even) {
   background-color: #f2f2f2;
 }
+.table-data tr{
+  background-color:#E1DBDB;
+}
 
 .table-data tr:hover {
-  background-color: #ddd;
+  background-color: #b6b3b3;
 }
 
 .table-data td {

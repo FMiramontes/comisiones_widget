@@ -7,11 +7,14 @@
     <script src="./js/main.js" defer></script>
   </head>
   <body>
-    <h1>Comisiones</h1>
+    <div class="title">
+      <h1>COMISIONES</h1>
+      <div class="linea"></div>
+    </div>
     <div class="menu">
-      <div class="tab tab-cordinadores"><p>Cordinadores</p></div>
-      <div class="tab tab-vendedores"><p>Vendedores</p></div>
-      <div class="tab tab-call-center"><p>Call Center</p></div>
+      <div class="tab tab-cordinadores"data-tab-target="#Coordinadores"><p>Coordinadores</p></div>
+      <div class="tab tab-vendedores"data-tab-target="#Vendedores"><p>Vendedores</p></div>
+      <div class="tab tab-call-center"data-tab-target="#CallCenter"><p>Call Center</p></div>
       <!--  -->
       <div class="tab tab-nominas"><p>Nominas</p></div>
     </div>
@@ -30,10 +33,7 @@
           <th>Comision (%)</th>
           <th>A pagar</th>
           <th>Saldo adeudado</th>
-          <th>Remanente 1</th>
-          <th>Remanente 2</th>
-          <th>Remanente 3</th>
-          <th>Remanente 4</th>
+          <th colspan="2">Remanente 1</th>
           <th>Comision Pagada</th>
         </thead>
         <tbody>
@@ -52,8 +52,6 @@
             </td>
             <td>$0</td>
             <td>$220</td>
-            <td><input type="text" class="form-field" /></td>
-            <td><input type="text" class="form-field" /></td>
             <td><input type="text" class="form-field" /></td>
             <td><input type="text" class="form-field" /></td>
             <td>
