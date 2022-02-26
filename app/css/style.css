@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,400&display=swap");
 
-html{
+*{
   box-sizing: border-box;
+}
+html{
   background-color: #e5e5e5;
 }
 
@@ -13,7 +15,7 @@ body {
 
 .wrapper {
   width: 100%;
-  overflow-x: auto;
+  /* overflow-x: hidden; */
 }
 .title{
   display: flex;
@@ -27,7 +29,7 @@ body {
   background-color: #de9f27;
 }
 h1{
-  margin: 5px;
+  margin: 25px 5px 5px 5px;
 }
 
 /* Table */
@@ -59,11 +61,14 @@ h1{
   background-color: #f2f2f2;
 }
 .table-data tr{
-  background-color:#E1DBDB;
+  background-color:#dedede;
 }
 
 .table-data tr:hover {
-  background-color: #b6b3b3;
+  background-color: #cfcfcf;
+}
+.table-data tr:nth-child(even):hover {
+  background-color: #e2e2e2;
 }
 
 .table-data td {
@@ -81,4 +86,38 @@ h1{
 
 .porcent {
   width: 40px;
+}
+
+.new-row {
+  background-color: #000;
+  border: 1px solid #000;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 12px 25px;
+  text-align: center;
+  margin: 25px;
+}
+.add{
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+.add:hover{
+  background-color: #de9f27;
+  border-color: #de9f27;
+  cursor: pointer;
+}
+.new-row:hover {
+  background-color: #de9f27;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border: 1px solid #de9f27;
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
 }
