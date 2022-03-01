@@ -12,10 +12,20 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
+.container-data{
+  display: flex;
+  flex-direction: row;
+  width: 120vw;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
 
 .wrapper {
   width: 100%;
-  /* overflow-x: hidden; */
+  display: none;
+  /* padding: 0 15px; */
+  /* position: absolute;
+  overflow-x: hidden; */
 }
 .title{
   display: flex;
@@ -39,6 +49,7 @@ h1{
   border-radius: 15px;
   width: 120vw;
   table-layout: fixed;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .table-data th,
@@ -53,6 +64,7 @@ h1{
 .table-data th:first-child{
   border-radius: 10px 0 0 0;
 }
+
 .table-data th:last-child{
   border-radius: 0 10px 0 0;
 }
@@ -63,7 +75,9 @@ h1{
 .table-data tr{
   background-color:#dedede;
 }
-
+/* .separador{
+  border-left: 5px solid red;
+} */
 .table-data tr:hover {
   background-color: #cfcfcf;
 }
@@ -74,7 +88,6 @@ h1{
 .table-data td {
   text-align: center;
   font-size: 13px;
-  /* font-weight: bold; */
 }
 
 .form-field {
@@ -102,15 +115,19 @@ h1{
   margin: 25px;
 }
 .add{
+  width: 50%;
   background-color: #000;
   color: #fff;
+  font-size: 16px;
   font-weight: bold;
-  border-radius: 50%;
+  border-radius: 10px;
   border: 1px solid #000;
+  padding: 5px 0; 
 }
 .add:hover{
   background-color: #de9f27;
   border-color: #de9f27;
+  color: #000;
   cursor: pointer;
 }
 .new-row:hover {

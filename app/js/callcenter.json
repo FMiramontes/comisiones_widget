@@ -1,0 +1,77 @@
+[
+    {
+      "FechaCierre": "25/02/2022",
+      "Coordinador": "Amy",
+      "Cliente": "Maria",
+      "Lote": "Villa Prueba M7-L2",
+      "TipoPolitica": "Enganche",
+      "FormaPago": "Credito",
+      "Apartado": "$0",
+      "ValorColocado": "$140,000",
+      "APagar": "$0",
+      "SaldoAdeudado": "$250"
+    },
+    {
+      "FechaCierre": "25/02/2022",
+      "Coordinador": "Juana",
+      "Cliente": "Pablo",
+      "Lote": "Villa Prueba M5-L11",
+      "TipoPolitica": "Enganche",
+      "FormaPago": "Credito",
+      "Apartado": "$0",
+      "ValorColocado": "$180,000",
+      "APagar": "$0",
+      "SaldoAdeudado": "$200"
+    },
+    {
+      "FechaCierre": "26/02/2022",
+      "Coordinador": "Fernanda",
+      "Cliente": "Johana",
+      "Lote": "Villa Prueba M8-L50",
+      "TipoPolitica": "Enganche",
+      "FormaPago": "Credito",
+      "Apartado": "$0",
+      "ValorColocado": "$159,000",
+      "APagar": "$0",
+      "SaldoAdeudado": "$290"
+    },
+    {
+      "FechaCierre": "20/02/2022",
+      "Coordinador": "Eduardo",
+      "Cliente": "Pedro",
+      "Lote": "Villa Prueba M1-L5",
+      "TipoPolitica": "Enganche",
+      "FormaPago": "Credito",
+      "Apartado": "$0",
+      "ValorColocado": "$159,000",
+      "APagar": "$0",
+      "SaldoAdeudado": "$210"
+    },
+    {
+      "FechaCierre": "20/02/2019",
+      "Coordinador": "Alex",
+      "Cliente": "Ramon",
+      "Lote": "Villa Prueba M15-L7",
+      "TipoPolitica": "Enganche",
+      "FormaPago": "Credito",
+      "Apartado": "$0",
+      "ValorColocado": "$159,000",
+      "APagar": "$0",
+      "SaldoAdeudado": "$250"
+    },
+    {
+      "FechaCierre": "15/02/2021",
+      "Coordinador": "Manuela",
+      "Cliente": "Maritza",
+      "Lote": "Villa Prueba M15-L3",
+      "TipoPolitica": "Enganche",
+      "FormaPago": "Credito",
+      "Apartado": "$0",
+      "ValorColocado": "$155,000",
+      "APagar": "$0",
+      "SaldoAdeudado": "$220"
+    }
+  ]
+  
+  
+  

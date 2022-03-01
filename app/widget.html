@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/menu.css" />
     <script src="./js/main.js" defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="title">
@@ -13,17 +12,17 @@
       <div class="linea"></div>
     </div>
     <div class="menu">
-      <div class="tab tab-cordinadores"data-tab-target="#Coordinadores"><p>Coordinadores</p></div>
-      <div class="tab tab-vendedores"data-tab-target="#Vendedores"><p>Vendedores</p></div>
-      <div class="tab tab-call-center"data-tab-target="#CallCenter"><p>Call Center</p></div>
-      <!--  -->
+      <div class="tab tab-coordinadores" data-tab-target="#Coordinadores" onclick="showContent('coordinadores')"><p>Coordinadores</p></div>
+      <div class="tab tab-vendedores" data-tab-target="#Vendedores" onclick="showContent('vendedores')"><p>Vendedores</p></div>
+      <div class="tab tab-call-center" data-tab-target="#CallCenter" onclick="showContent('callcenter')"><p>Call Center</p></div>
       <div class="tab tab-nominas"><p>Nominas</p></div>
     </div>
-    <div class="wrapper">
+    <div class="container-data">
+    <div class="wrapper" id="coordinadores">
       <table id="table-data" class="table-data">
-        <thead>
+        <thead >
+          <tr id="row1">
           <th>Fecha de Cierre</th>
-          <th>Vendedor</th>
           <th>Coordinador</th>
           <th>Cliente</th>
           <th>Lote</th>
@@ -35,40 +34,66 @@
           <th>A pagar</th>
           <th>Saldo adeudado</th>
           <th>Comision Pagada</th>
-          <th id="cols" colspan="3">Remanente 1</th>
-        </thead>
-        <tbody id="table-body">
-
-          <tr>
-            <td>2022/01/05</td>
-            <td>Vendedor Prueba</td>
-            <td>Coordinador Prueba</td>
-            <td>Prueba prueba prueba</td>
-            <td>VILLA PRUEBA M2-L2</td>
-            <td>Enganche</td>
-            <td>Credito</td>
-            <td>$0</td>
-            <td>$159,000</td>
-            <td>
-              <input type="text" class="form-field porcent" placeholder="%" />
-            </td>
-            <td>$0</td>
-            <td>$220</td>
-            <td>
-              <input
-                type="checkbox"
-                name="comision-pagada"
-                id="comision-pagada"
-              />
-            </td>
-            <td><button type="button" class="add" onclick="addRemanente(this)" data-cont=3> + </button></td>
-            <td><input type="text" class="form-field" /></td>
-            <td><input type="text" class="form-field" /></td>
+          <th id="cols" colspan="2">Remanente 1</th>
+          <th></th>
           </tr>
-
+        </thead>
+        <tbody id="coordinador" class="table-body">
         </tbody>
       </table>
-      <button class="new-row" onclick="addRow()">Añadir Registro</button>
     </div>
+
+    <div class="wrapper" id="vendedores">
+      <table id="table-data" class="table-data">
+        <thead >
+          <tr id="row1">
+          <th>Fecha de Cierre</th>
+          <th>Vendedor</th>
+          <th>Cliente</th>
+          <th>Lote</th>
+          <th>Tipo de Politica</th>
+          <th>Forma de Pago</th>
+          <th>Apartado</th>
+          <th>Valor Colocado</th>
+          <th>Comision (%)</th>
+          <th>A pagar</th>
+          <th>Saldo adeudado</th>
+          <th>Comision Pagada</th>
+          <th id="cols" colspan="2">Remanente 1</th>
+          <th></th>
+          </tr>
+        </thead>
+        <tbody id="vendedor" class="table-body">
+        </tbody>
+        </table>
+    </div>
+
+    <div class="wrapper" id="callcenter">
+      <table id="table-data" class="table-data">
+        <thead >
+          <tr id="row1">
+          <th>Fecha de Cierre</th>
+          <th>Coordinador</th>
+          <th>Cliente</th>
+          <th>Lote</th>
+          <th>Tipo de Politica</th>
+          <th>Forma de Pago</th>
+          <th>Apartado</th>
+          <th>Valor Colocado</th>
+          <th>Comision (%)</th>
+          <th>A pagar</th>
+          <th>Saldo adeudado</th>
+          <th>Comision Pagada</th>
+          <th id="cols" colspan="2">Remanente 1</th>
+          <th></th>
+          </tr>
+        </thead>
+        <tbody id="call-center" class="table-body">
+        </tbody>
+      </table>
+    </div>
+    </div>
+
+    <button class="new-row" onclick="addRow()">Añadir Registro</button>
   </body>
 </html>
