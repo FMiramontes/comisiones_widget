@@ -103,46 +103,54 @@ function addRow() {
 
 }
 
-let parentRow;
-let row1 = document.getElementById('row1')
-
-// let cont1 = 3;
-
-// let contCol;
-
 function addRemanente(remanente) {
-  console.log("add remanente");
-  // let table_body = document.getElementById("table-body");
+  let parentRow;
+  let row1 = document.getElementById('row1')
   parentRow = remanente.parentNode.parentNode;
-  // parentRow = $(remanente).parent().parent();
-  // console.log(parentRow);
-  // console.log(contCol);
-
-  // if (cont1 <= 50) {
-  //   cont1+=1;
-
-  //   remanente.dataset.cont = cont1;
-
-  //   let column_remanente = document.getElementById("cols");
-  //   contCol = remanente.dataset.cont;
-  //   console.log(contCol);
-
-    //console.log(column_remanente);
-    // column_remanente.setAttribute("colspan", cont1.toString());
-
-    th = document.createElement('th')
-    th.setAttribute('colspan', '2')
-    td1 = document.createElement("td");
-    td1.innerHTML = `<input type="text" class="form-field" />`;
-    td2 = document.createElement("td");
-    td2.innerHTML = `<input type="text" class="form-field" />`;
-    parentRow.append(td1);
-    parentRow.append(td2);
-    row1.append(th)
-//   }else{
-//     console.log("limite de remanentes")
-//   }
+  let tdActual = remanente.parentNode
+  console.log('td', tdActual)
+  console.log(parentRow);
+  th = document.createElement('th')
+  th.setAttribute('colspan', '2')
+  th.innerText = 'Nueva Remanente'
+  td1 = document.createElement("td");
+  td1.innerHTML = `<input type="text" class="form-field" />`;
+  td2 = document.createElement("td");
+  td2.innerHTML = `<input type="text" class="form-field" />`;
+  parentRow.insertBefore(td1, tdActual);
+  parentRow.insertBefore(td2, tdActual);
+  row1.append(th)
 }
+//Agregar Columna Completa de Remitente 
+function agregarColumna(){
+  let tbody = document.querySelector('.table-body');
+  let th = document.createElement('th');
+  th.innerText = 'Remanente'
+  th.setAttribute("colspan","2");
+  let tr = document.getElementById('row1');
+  let thead = document.querySelector('.thead')
+  tr.deleteCell(thead.rows[0].childElementCount-1)
+  tr.appendChild(th);
+  let thBoton = document.createElement('th')
+  tr.appendChild(thBoton)
+  let rowCount = tbody.rows.length;
+  for(let i=0; i<rowCount; i++){
+    var row = tbody.rows[i];
+    console.log('tdBoton: ', tdActual)
+    let cellCount = tbody.rows[i].cells.length-1; 
+    console.log('cellCount: ', cellCount)
+    row.insertCell(cellCount).innerHTML = `<input type="text" class="form-field"/>`;
+    row.insertCell(cellCount).innerHTML = `<input type="text" class="form-field"/>`;
+
+      //  let cellCount = tbody.rows[i].cells.length;  
+
+      //  console.log('cell-count: ', cellCount);
+      //  if(cellCount > cellMayor ){
+      //     cellMayor = cellCount;
+      //     console.log('cell+', cellMayor)
+          
+       }
+  }
 
 // Carga la información a la tabla Coordinadores
 fetch("./js/coordinadores.json")
@@ -151,7 +159,7 @@ fetch("./js/coordinadores.json")
          .catch(error => console.log(error))
         
          const mostrarCoordinador = (data) =>{
-           console.log(data);
+          //  console.log(data);
            let html = '';
            for (let i = 0; i<data.length; i++){
              html +=
@@ -183,12 +191,11 @@ fetch("./js/vendedores.json")
          .catch(error => console.log(error))
         
          const mostrarVendedores = (data) =>{
-           console.log(data);
+          //  console.log(data);
            let html = '';
            for (let i = 0; i<data.length; i++){
              html +=
             `
-            <div class="separador"></div>
             <tr>
              <td>${data[i].FechaCierre}</td>
              <td>${data[i].Vendedor}</td>
@@ -216,7 +223,7 @@ fetch("./js/callcenter.json")
 .catch(error => console.log(error))
 
 const mostrarCallCenter = (data) =>{
-  console.log(data);
+  // console.log(data);
   let html = '';
   for (let i = 0; i<data.length; i++){
     html +=
@@ -241,27 +248,6 @@ const mostrarCallCenter = (data) =>{
   document.getElementById('call-center').innerHTML = html;
 }
 
-// let tabCoordinadores = document.querySelector('.tab-cordinadores'),
-//     tabVendedores    = document.querySelector('.tab-vendedores'),
-//     tabCallCenter    = document.querySelector('.tab-call-center'),
-//     divCoordinadores = document.getElementById('coordinadores'),
-//     divVendedores    = document.getElementById('vendedores');
-
-// function Coordinador () {
-//   // c.style.left = '140px'
-//  divCoordinadores.classList = 'cont-coordinador'
-// }
-// function Vendedor(){
-//   // c.style.left = '0px'
-//   divVendedores.classList = 'cont-vendedor'
-// }
-
-// tabCoordinadores.addEventListener('click', () => {
-//   Coordinador()
-// })
-// tabVendedores.addEventListener('click', () => {
-//   Vendedor()
-// })
 function showContent(type) {
   let i, tabcontent;
   tabcontent = document.getElementsByClassName("wrapper");
