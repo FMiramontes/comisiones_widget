@@ -12,9 +12,9 @@
       <div class="linea"></div>
     </div>
     <div class="menu">
-      <div class="tab tab-coordinadores" data-tab-target="#Coordinadores" onclick="showContent('coordinadores')"><p>Coordinadores</p></div>
-      <div class="tab tab-vendedores" data-tab-target="#Vendedores" onclick="showContent('vendedores')"><p>Vendedores</p></div>
-      <div class="tab tab-call-center" data-tab-target="#CallCenter" onclick="showContent('callcenter')"><p>Call Center</p></div>
+      <div id="tab" class="tab tab-coordinadores" data-tab-target="coordinador" onclick="showContent('coordinadores')"><p>Coordinadores</p></div>
+      <div id="tab" class="tab tab-vendedores" data-tab-target="vendedor" onclick="showContent('vendedores')"><p>Vendedores</p></div>
+      <div id="tab" class="tab tab-call-center" data-tab-target="callcenter" onclick="showContent('call-center')"><p>Call Center</p></div>
       <div class="tab tab-nominas"><p>Nominas</p></div>
     </div>
     <div class="container-data">
@@ -34,7 +34,7 @@
           <th>A pagar</th>
           <th>Saldo adeudado</th>
           <th>Comision Pagada</th>
-          <th id="cols" colspan="2">Remanente 1</th>
+          <th>Remanente 1</th>
           <th></th>
           </tr>
         </thead>
@@ -59,7 +59,7 @@
           <th>A pagar</th>
           <th>Saldo adeudado</th>
           <th>Comision Pagada</th>
-          <th id="cols" colspan="2">Remanente 1</th>
+          <th>Remanente 1</th>
           <th></th>
           </tr>
         </thead>
@@ -68,7 +68,7 @@
         </table>
     </div>
 
-    <div class="wrapper" id="callcenter">
+    <div class="wrapper" id="call-center">
       <table id="table-data" class="table-data">
         <thead >
           <tr id="row1">
@@ -84,11 +84,11 @@
           <th>A pagar</th>
           <th>Saldo adeudado</th>
           <th>Comision Pagada</th>
-          <th id="cols" colspan="2">Remanente 1</th>
+          <th>Remanente 1</th>
           <th></th>
           </tr>
         </thead>
-        <tbody id="call-center" class="table-body">
+        <tbody id="callcenter" class="table-body">
         </tbody>
       </table>
     </div>

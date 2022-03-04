@@ -2,13 +2,15 @@ const tabs = document.querySelectorAll("[data-tab-target]");
 
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
+    let type = tab.dataset.tabTarget
+    // console.log('Tipo: ', type)
+    fillContent(type)
     tabs.forEach((tab) => {
       tab.classList.remove("active");
     });
     tab.classList.add("active");
   });
 });
-
 //CREATE TABLE
 
 let comisiones = new Array(1);
@@ -100,33 +102,78 @@ function addRow() {
   row.appendChild(data);
 
   table_body.appendChild(row);
-
 }
 
-function addRemanente(remanente) {
+function addRemanente(e) {
   let parentRow;
   let row1 = document.getElementById('row1')
-  parentRow = remanente.parentNode.parentNode;
-  let tdActual = remanente.parentNode
-  console.log('td', tdActual)
-  console.log(parentRow);
-  th = document.createElement('th')
-  th.setAttribute('colspan', '2')
-  th.innerText = 'Nueva Remanente'
-  td1 = document.createElement("td");
-  td1.innerHTML = `<input type="text" class="form-field" />`;
-  td2 = document.createElement("td");
-  td2.innerHTML = `<input type="text" class="form-field" />`;
-  parentRow.insertBefore(td1, tdActual);
-  parentRow.insertBefore(td2, tdActual);
+  let th = document.createElement('th');
+  console.log(th)
+  th.innerText = 'Remanente'
+  parentRow = e.target.parentNode.parentNode;
+  parentRow.dataset.row = true;
+  let tdBoton = e.target.parentNode;
+  // let tdHermano = tdBoton.previousElementSibling;
+  console.log(tdBoton)
+  let td = document.createElement('td')
+  td.innerHTML = `<input type="date" class="form-field"/> <input type="number" class="form-field" placeholder="$"/>`
+  parentRow.insertBefore(td, tdBoton)
+  let thead = document.querySelector('.thead')
+  
+  row1.deleteCell(thead.rows[0].childElementCount-1)
   row1.append(th)
+  let thBoton = document.createElement('th')
+  row1.appendChild(thBoton)
+
+  // let tdActual = remanente.parentNode;
+  // console.log('td', tdActual)
+  // console.log(parentRow);
+  // console.log('tdBoton: ', tdActual)
+  // let tbody = document.querySelector('.table-body');
+  // let th = document.createElement('th');
+  // th.innerText = 'Remanente'
+  // th.setAttribute("colspan","2");
+  // let tr = document.getElementById('row1');
+  // let thead = document.querySelector('.thead')
+  // tr.deleteCell(thead.rows[0].childElementCount-1)
+  // tr.appendChild(th);
+  // let thBoton = document.createElement('th')
+  // tr.appendChild(thBoton)
+  // let rowCount = tbody.rows.length;
+  // // td1 = document.createElement("td");
+  // // td1.innerHTML = `<input type="text" class="form-field" />`;
+  // // td2 = document.createElement("td");
+  // // td2.innerHTML = `<input type="text" class="form-field" />`;
+  // // parentRow.insertBefore(td1, tdActual);
+  // // parentRow.insertBefore(td2, tdActual);
+  // // row1.append(th)
+
+  // for(let i=0; i<rowCount; i++){
+  //   var row = tbody.rows[i];
+  //   let cellCount = tbody.rows[i].cells.length-1; 
+  //   // (row.matches('[data-row]') && parentRow.dataset.row == "true")
+  //   console.log('row: ', tbody.rows)
+  //   if(row.matches('[data-row]') && parentRow.dataset.row == "true")
+  //   {
+  //     row.insertCell(cellCount).innerHTML = `<input type="text" class="form-field"/>`
+  //     row.insertCell(cellCount).innerHTML = `<input type="text" class="form-field"/>`
+  //     // parentRow.dataset.row = false
+  //   }
+  //   else
+  //   {
+  //     row.insertCell(cellCount)
+  //     row.insertCell(cellCount)
+  //   }
+
+    // row.insertCell(cellCount).innerHTML = `<input type="text" class="form-field"/>`
+    // row.insertCell(cellCount).innerHTML = `<input type="text" class="form-field"/>`
+  // }
 }
 //Agregar Columna Completa de Remitente 
 function agregarColumna(){
   let tbody = document.querySelector('.table-body');
   let th = document.createElement('th');
   th.innerText = 'Remanente'
-  th.setAttribute("colspan","2");
   let tr = document.getElementById('row1');
   let thead = document.querySelector('.thead')
   tr.deleteCell(thead.rows[0].childElementCount-1)
@@ -136,11 +183,11 @@ function agregarColumna(){
   let rowCount = tbody.rows.length;
   for(let i=0; i<rowCount; i++){
     var row = tbody.rows[i];
-    console.log('tdBoton: ', tdActual)
+    // console.log('tdBoton: ', tdActual)
     let cellCount = tbody.rows[i].cells.length-1; 
-    console.log('cellCount: ', cellCount)
-    row.insertCell(cellCount).innerHTML = `<input type="text" class="form-field"/>`;
-    row.insertCell(cellCount).innerHTML = `<input type="text" class="form-field"/>`;
+    // console.log('cellCount: ', cellCount)
+    row.insertCell(cellCount).innerHTML = `<input type="date" class="form-field"/> <input type="text" class="form-field" placeholder="$"/>`;
+    // row.insertCell(cellCount).innerHTML = `<input type="text" class="form-field" placeholder="$"/>`;
 
       //  let cellCount = tbody.rows[i].cells.length;  
 
@@ -152,21 +199,22 @@ function agregarColumna(){
        }
   }
 
-// Carga la información a la tabla Coordinadores
-fetch("./js/coordinadores.json")
+  function fillContent(type){
+    console.log(type)
+    fetch(`./js/${type}.json`)
          .then(resp => resp.json())
-         .then(data => mostrarCoordinador(data))
+         .then(data => mostrar(data))
          .catch(error => console.log(error))
         
-         const mostrarCoordinador = (data) =>{
-          //  console.log(data);
+         const mostrar = (data) =>{
+          console.log(data);
            let html = '';
            for (let i = 0; i<data.length; i++){
              html +=
             `
             <tr>
              <td>${data[i].FechaCierre}</td>
-             <td>${data[i].Coordinador}</td>
+             <td>${data[i].Nombre}</td>
              <td>${data[i].Cliente}</td>
              <td>${data[i].Lote}</td>
              <td>${data[i].TipoPolitica}</td>
@@ -177,76 +225,13 @@ fetch("./js/coordinadores.json")
              <td>${data[i].APagar}</td>
              <td>${data[i].SaldoAdeudado}</td>
              <td><input type="checkbox" name="comision-pagada" id="comision-pagada"/></td>
-             <td><input type="text" class="form-field"/></td>
-             <td><input type="text" class="form-field"/></td>
-             <td><button type="button"class="add" onclick="addRemanente(this)" data-cont=3> + </button></td>
+             <td><input type="date" class="form-field"/><input type="number" class="form-field" placeholder="$"/></td>
+             <td><button type="button"class="add" onclick="addRemanente(event)" data-cont=3> + </button></td>
              </tr>`
            }
-           document.getElementById('coordinador').innerHTML = html;
+           document.getElementById(`${type}`).innerHTML = html;
         }
-// Carga la información a la tabla Vendedores
-fetch("./js/vendedores.json")
-         .then(resp => resp.json())
-         .then(data => mostrarVendedores(data))
-         .catch(error => console.log(error))
-        
-         const mostrarVendedores = (data) =>{
-          //  console.log(data);
-           let html = '';
-           for (let i = 0; i<data.length; i++){
-             html +=
-            `
-            <tr>
-             <td>${data[i].FechaCierre}</td>
-             <td>${data[i].Vendedor}</td>
-             <td>${data[i].Cliente}</td>
-             <td>${data[i].Lote}</td>
-             <td>${data[i].TipoPolitica}</td>
-             <td>${data[i].FormaPago}</td>
-             <td>${data[i].Apartado}</td>
-             <td>${data[i].ValorColocado}</td>
-             <td><input type="text" class="form-field porcent" placeholder="%" /></td>
-             <td>${data[i].APagar}</td>
-             <td>${data[i].SaldoAdeudado}</td>
-             <td><input type="checkbox" name="comision-pagada" id="comision-pagada"/></td>
-             <td><input type="text" class="form-field"/></td>
-             <td><input type="text" class="form-field"/></td>
-             <td><button type="button"class="add" onclick="addRemanente(this)" data-cont=3> + </button></td>
-             </tr>`
-           }
-           document.getElementById('vendedor').innerHTML = html;
-        }
-  // Carga la información a la tabla Coordinadores
-fetch("./js/callcenter.json")
-.then(resp => resp.json())
-.then(data => mostrarCallCenter(data))
-.catch(error => console.log(error))
-
-const mostrarCallCenter = (data) =>{
-  // console.log(data);
-  let html = '';
-  for (let i = 0; i<data.length; i++){
-    html +=
-   `<tr>
-    <td>${data[i].FechaCierre}</td>
-    <td>${data[i].Coordinador}</td>
-    <td>${data[i].Cliente}</td>
-    <td>${data[i].Lote}</td>
-    <td>${data[i].TipoPolitica}</td>
-    <td>${data[i].FormaPago}</td>
-    <td>${data[i].Apartado}</td>
-    <td>${data[i].ValorColocado}</td>
-    <td><input type="text" class="form-field porcent" placeholder="%" /></td>
-    <td>${data[i].APagar}</td>
-    <td>${data[i].SaldoAdeudado}</td>
-    <td><input type="checkbox" name="comision-pagada" id="comision-pagada"/></td>
-    <td><input type="text" class="form-field"/></td>
-    <td><input type="text" class="form-field"/></td>
-    <td><button type="button"class="add" onclick="addRemanente(this)" data-cont=3> + </button></td>
-    </tr>`
   }
-  document.getElementById('call-center').innerHTML = html;
-}
 
 function showContent(type) {
   let i, tabcontent;

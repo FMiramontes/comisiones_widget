@@ -1,7 +1,7 @@
 [
     {
       "FechaCierre": "25/02/2022",
-      "Vendedor": "Yahaira",
+      "Nombre": "Yahaira",
       "Cliente": "Ariana Grande",
       "Lote": "Villa Prueba M2-L2",
       "TipoPolitica": "Enganche",
@@ -14,7 +14,7 @@
     },
     {
       "FechaCierre": "25/02/2022",
-      "Vendedor": "Alejandra",
+      "Nombre": "Alejandra",
       "Cliente": "Jorge",
       "Lote": "Villa Prueba M5-L4",
       "TipoPolitica": "Enganche",
@@ -27,7 +27,7 @@
     },
     {
       "FechaCierre": "26/02/2022",
-      "Vendedor": "Ariana",
+      "Nombre": "Ariana",
       "Cliente": "Alexa",
       "Lote": "Villa Prueba M7-L4",
       "TipoPolitica": "Enganche",
@@ -40,7 +40,7 @@
     },
     {
       "FechaCierre": "20/02/2022",
-      "Vendedor": "Dua",
+      "Nombre": "Dua",
       "Cliente": "Peter",
       "Lote": "Villa Prueba M1-L2",
       "TipoPolitica": "Enganche",
@@ -53,7 +53,7 @@
     },
     {
       "FechaCierre": "20/02/2019",
-      "Vendedor": "Olivia",
+      "Nombre": "Olivia",
       "Cliente": "Roxana",
       "Lote": "Villa Prueba M9-L7",
       "TipoPolitica": "Enganche",
@@ -66,7 +66,7 @@
     },
     {
       "FechaCierre": "15/02/2021",
-      "Vendedor": "Catherine",
+      "Nombre": "Catherine",
       "Cliente": "Bryan",
       "Lote": "Villa Prueba M15-L3",
       "TipoPolitica": "Enganche",

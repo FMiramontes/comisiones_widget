@@ -1,7 +1,7 @@
 [
     {
       "FechaCierre": "25/02/2022",
-      "Coordinador": "Amy",
+      "Nombre": "Amy",
       "Cliente": "Maria",
       "Lote": "Villa Prueba M7-L2",
       "TipoPolitica": "Enganche",
@@ -13,7 +13,7 @@
     },
     {
       "FechaCierre": "25/02/2022",
-      "Coordinador": "Juana",
+      "Nombre": "Juana",
       "Cliente": "Pablo",
       "Lote": "Villa Prueba M5-L11",
       "TipoPolitica": "Enganche",
@@ -25,7 +25,7 @@
     },
     {
       "FechaCierre": "26/02/2022",
-      "Coordinador": "Fernanda",
+      "Nombre": "Fernanda",
       "Cliente": "Johana",
       "Lote": "Villa Prueba M8-L50",
       "TipoPolitica": "Enganche",
@@ -37,7 +37,7 @@
     },
     {
       "FechaCierre": "20/02/2022",
-      "Coordinador": "Eduardo",
+      "Nombre": "Eduardo",
       "Cliente": "Pedro",
       "Lote": "Villa Prueba M1-L5",
       "TipoPolitica": "Enganche",
@@ -49,7 +49,7 @@
     },
     {
       "FechaCierre": "20/02/2019",
-      "Coordinador": "Alex",
+      "Nombre": "Alex",
       "Cliente": "Ramon",
       "Lote": "Villa Prueba M15-L7",
       "TipoPolitica": "Enganche",
@@ -61,7 +61,7 @@
     },
     {
       "FechaCierre": "15/02/2021",
-      "Coordinador": "Manuela",
+      "Nombre": "Manuela",
       "Cliente": "Maritza",
       "Lote": "Villa Prueba M15-L3",
       "TipoPolitica": "Enganche",

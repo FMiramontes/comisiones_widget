@@ -1,7 +1,7 @@
 [
     {
       "FechaCierre": "25/02/2022",
-      "Coordinador": "Amy Lee",
+      "Nombre": "Amy Lee",
       "Cliente": "Ariana Grande",
       "Lote": "Villa Prueba M2-L2",
       "TipoPolitica": "Enganche",
@@ -10,11 +10,12 @@
       "ValorColocado": "$159,000",
       "APagar": "$0",
       "SaldoAdeudado": "$220",
-      "ComisionPagada": "false"
+      "ComisionPagada": "false",
+      "tipo": "a"
     },
     {
       "FechaCierre": "25/02/2022",
-      "Coordinador": "Maria",
+      "Nombre": "Maria",
       "Cliente": "Jorge",
       "Lote": "Villa Prueba M5-L4",
       "TipoPolitica": "Enganche",
@@ -23,11 +24,12 @@
       "ValorColocado": "$159,000",
       "APagar": "$0",
       "SaldoAdeudado": "$220",
-      "ComisionPagada": "true"
+      "ComisionPagada": "true",
+      "tipo": "b"
     },
     {
       "FechaCierre": "26/02/2022",
-      "Coordinador": "Dalton",
+      "Nombre": "Dalton",
       "Cliente": "Alexa",
       "Lote": "Villa Prueba M7-L4",
       "TipoPolitica": "Enganche",
@@ -36,11 +38,12 @@
       "ValorColocado": "$159,000",
       "APagar": "$0",
       "SaldoAdeudado": "$220",
-      "ComisionPagada": "false"
+      "ComisionPagada": "false",
+      "tipo": "a"
     },
     {
       "FechaCierre": "20/02/2022",
-      "Coordinador": "Ed",
+      "Nombre": "Ed",
       "Cliente": "Peter",
       "Lote": "Villa Prueba M1-L2",
       "TipoPolitica": "Enganche",
@@ -49,11 +52,13 @@
       "ValorColocado": "$159,000",
       "APagar": "$0",
       "SaldoAdeudado": "$220",
-      "ComisionPagada": "false"
+      "ComisionPagada": "false",
+      "tipo": "c"
+
     },
     {
       "FechaCierre": "20/02/2019",
-      "Coordinador": "Kevin",
+      "Nombre": "Kevin",
       "Cliente": "Roxana",
       "Lote": "Villa Prueba M9-L7",
       "TipoPolitica": "Enganche",
@@ -66,7 +71,7 @@
     },
     {
       "FechaCierre": "15/02/2021",
-      "Coordinador": "Manuel",
+      "Nombre": "Manuel",
       "Cliente": "Bryan",
       "Lote": "Villa Prueba M15-L3",
       "TipoPolitica": "Enganche",

@@ -17,7 +17,6 @@ body {
   flex-direction: row;
   width: 120vw;
   overflow: hidden;
-  border: 1px solid #ccc;
 }
 
 .wrapper {
