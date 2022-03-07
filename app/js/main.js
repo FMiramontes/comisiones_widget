@@ -116,6 +116,11 @@ function addRemanente(e) {
   // let tdHermano = tdBoton.previousElementSibling;
   console.log(tdBoton)
   let td = document.createElement('td')
+  // td.dataset.index = 0;
+  let Index = td.dataset.index = 0;
+  let newIndex = Number(Index) +1;
+ 
+  console.log('newInd',newIndex)
   td.innerHTML = `<input type="date" class="form-field"/> <input type="number" class="form-field" placeholder="$"/>`
   parentRow.insertBefore(td, tdBoton)
   let thead = document.querySelector('.thead')
@@ -207,7 +212,7 @@ function agregarColumna(){
          .catch(error => console.log(error))
         
          const mostrar = (data) =>{
-          console.log(data);
+          // console.log(data);
            let html = '';
            for (let i = 0; i<data.length; i++){
              html +=
@@ -225,12 +230,14 @@ function agregarColumna(){
              <td>${data[i].APagar}</td>
              <td>${data[i].SaldoAdeudado}</td>
              <td><input type="checkbox" name="comision-pagada" id="comision-pagada"/></td>
-             <td><input type="date" class="form-field"/><input type="number" class="form-field" placeholder="$"/></td>
+             <td class="color-user"><input type="date" class="form-field"/><input type="number" class="form-field" placeholder="$"/></td>
              <td><button type="button"class="add" onclick="addRemanente(event)" data-cont=3> + </button></td>
              </tr>`
            }
            document.getElementById(`${type}`).innerHTML = html;
+          colorUsuario(data)
         }
+        
   }
 
 function showContent(type) {
@@ -240,4 +247,28 @@ function showContent(type) {
     tabcontent[i].style.display = "none";
   }
   document.getElementById(type).style.display = "block";
+}
+
+function colorUsuario(data){
+  let tdColor = document.querySelectorAll('.color-user')
+  // console.log('tds:' , tdColor)
+  // console.log('data:' , data)
+  for(i =0; i<tdColor.length; i++) {
+    // console.log(element);
+    if(data[i].tipo == 'a'){
+      tdColor[i].style.borderLeft = '3px solid red'
+      let tr = tdColor[i].parentElement
+      tr.style.borderLeft ='8px solid red'
+      
+    }
+    else if(data[i].tipo == 'b'){
+      tdColor[i].style.borderLeft = '3px solid blue'
+      let tr = tdColor[i].parentElement
+      tr.style.borderLeft ='8px solid blue'
+    }else{
+      tdColor[i].style.borderLeft = '3px solid green'
+      let tr = tdColor[i].parentElement
+      tr.style.borderLeft ='8px solid green'
+  }
+  }
 }

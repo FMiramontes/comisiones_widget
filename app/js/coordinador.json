@@ -67,7 +67,8 @@
       "ValorColocado": "$159,000",
       "APagar": "$0",
       "SaldoAdeudado": "$250",
-      "ComisionPagada": "false"
+      "ComisionPagada": "false",
+      "tipo": "b"
     },
     {
       "FechaCierre": "15/02/2021",
@@ -80,7 +81,8 @@
       "ValorColocado": "$155,000",
       "APagar": "$0",
       "SaldoAdeudado": "$220",
-      "ComisionPagada": "false"
+      "ComisionPagada": "false",
+      "tipo": "c"
     }
   ]
   
