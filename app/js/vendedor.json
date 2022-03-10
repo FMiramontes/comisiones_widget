@@ -1,0 +1,83 @@
+[
+    {
+      "FechaCierre": "25/02/2022",
+      "Nombre": "Yahaira",
+      "Cliente": "Ariana Grande",
+      "Lote": "Villa Prueba M2-L2",
+      "TipoPolitica": "Enganche",
+      "FormaPago": "Credito",
+      "Apartado": "$0",
+      "ValorColocado": "$159,000",
+      "APagar": "$0",
+      "SaldoAdeudado": "$220",
+      "ComisionPagada": "false"
+    },
+    {
+      "FechaCierre": "25/02/2022",
+      "Nombre": "Alejandra",
+      "Cliente": "Jorge",
+      "Lote": "Villa Prueba M5-L4",
+      "TipoPolitica": "Enganche",
+      "FormaPago": "Credito",
+      "Apartado": "$0",
+      "ValorColocado": "$159,000",
+      "APagar": "$0",
+      "SaldoAdeudado": "$220",
+      "ComisionPagada": "true"
+    },
+    {
+      "FechaCierre": "26/02/2022",
+      "Nombre": "Ariana",
+      "Cliente": "Alexa",
+      "Lote": "Villa Prueba M7-L4",
+      "TipoPolitica": "Enganche",
+      "FormaPago": "Credito",
+      "Apartado": "$0",
+      "ValorColocado": "$159,000",
+      "APagar": "$0",
+      "SaldoAdeudado": "$220",
+      "ComisionPagada": "false"
+    },
+    {
+      "FechaCierre": "20/02/2022",
+      "Nombre": "Dua",
+      "Cliente": "Peter",
+      "Lote": "Villa Prueba M1-L2",
+      "TipoPolitica": "Enganche",
+      "FormaPago": "Credito",
+      "Apartado": "$0",
+      "ValorColocado": "$159,000",
+      "APagar": "$0",
+      "SaldoAdeudado": "$220",
+      "ComisionPagada": "false"
+    },
+    {
+      "FechaCierre": "20/02/2019",
+      "Nombre": "Olivia",
+      "Cliente": "Roxana",
+      "Lote": "Villa Prueba M9-L7",
+      "TipoPolitica": "Enganche",
+      "FormaPago": "Credito",
+      "Apartado": "$0",
+      "ValorColocado": "$159,000",
+      "APagar": "$0",
+      "SaldoAdeudado": "$250",
+      "ComisionPagada": "false"
+    },
+    {
+      "FechaCierre": "15/02/2021",
+      "Nombre": "Catherine",
+      "Cliente": "Bryan",
+      "Lote": "Villa Prueba M15-L3",
+      "TipoPolitica": "Enganche",
+      "FormaPago": "Credito",
+      "Apartado": "$0",
+      "ValorColocado": "$155,000",
+      "APagar": "$0",
+      "SaldoAdeudado": "$220",
+      "ComisionPagada": "false"
+    }
+  ]
+  
+  
+  

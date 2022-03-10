@@ -1,0 +1,90 @@
+[
+    {
+      "FechaCierre": "25/02/2022",
+      "Nombre": "Amy Lee",
+      "Cliente": "Ariana Grande",
+      "Lote": "Villa Prueba M2-L2",
+      "TipoPolitica": "Enganche",
+      "FormaPago": "Credito",
+      "Apartado": "$0",
+      "ValorColocado": "$159,000",
+      "APagar": "$0",
+      "SaldoAdeudado": "$220",
+      "ComisionPagada": "false",
+      "tipo": "a"
+    },
+    {
+      "FechaCierre": "25/02/2022",
+      "Nombre": "Maria",
+      "Cliente": "Jorge",
+      "Lote": "Villa Prueba M5-L4",
+      "TipoPolitica": "Enganche",
+      "FormaPago": "Credito",
+      "Apartado": "$0",
+      "ValorColocado": "$159,000",
+      "APagar": "$0",
+      "SaldoAdeudado": "$220",
+      "ComisionPagada": "true",
+      "tipo": "b"
+    },
+    {
+      "FechaCierre": "26/02/2022",
+      "Nombre": "Dalton",
+      "Cliente": "Alexa",
+      "Lote": "Villa Prueba M7-L4",
+      "TipoPolitica": "Enganche",
+      "FormaPago": "Credito",
+      "Apartado": "$0",
+      "ValorColocado": "$159,000",
+      "APagar": "$0",
+      "SaldoAdeudado": "$220",
+      "ComisionPagada": "false",
+      "tipo": "a"
+    },
+    {
+      "FechaCierre": "20/02/2022",
+      "Nombre": "Ed",
+      "Cliente": "Peter",
+      "Lote": "Villa Prueba M1-L2",
+      "TipoPolitica": "Enganche",
+      "FormaPago": "Credito",
+      "Apartado": "$0",
+      "ValorColocado": "$159,000",
+      "APagar": "$0",
+      "SaldoAdeudado": "$220",
+      "ComisionPagada": "false",
+      "tipo": "c"
+
+    },
+    {
+      "FechaCierre": "20/02/2019",
+      "Nombre": "Kevin",
+      "Cliente": "Roxana",
+      "Lote": "Villa Prueba M9-L7",
+      "TipoPolitica": "Enganche",
+      "FormaPago": "Credito",
+      "Apartado": "$0",
+      "ValorColocado": "$159,000",
+      "APagar": "$0",
+      "SaldoAdeudado": "$250",
+      "ComisionPagada": "false",
+      "tipo": "b"
+    },
+    {
+      "FechaCierre": "15/02/2021",
+      "Nombre": "Manuel",
+      "Cliente": "Bryan",
+      "Lote": "Villa Prueba M15-L3",
+      "TipoPolitica": "Enganche",
+      "FormaPago": "Credito",
+      "Apartado": "$0",
+      "ValorColocado": "$155,000",
+      "APagar": "$0",
+      "SaldoAdeudado": "$220",
+      "ComisionPagada": "false",
+      "tipo": "c"
+    }
+  ]
+  
+  
+  
